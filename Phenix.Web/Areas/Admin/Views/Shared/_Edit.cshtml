@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head >
+        <title>网站管理</title>
+        <link href="~/Content/Admin/Css/main.css" rel="Stylesheet" type="text/css">
+        <link href="~/Content/Admin/Css/form.css" rel="Stylesheet" type="text/css">
+        <script src='~/Content/Admin/Javascript/jquery-1.4.2.min.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/common.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/jquery.form.js' type='text/javascript'></script>
+        <script type="text/javascript">
+            $(document).ready(function(e) {
+                $("#btnSave").click(function(e) {
+                    $("form").ajaxSubmit(options);
+                });
+                $("#btnCancel").click(function(e) {
+                    CloseModelWindow(null, false);
+                });
+                var options = {
+                    dataType: "json",
+                    error: function() { showErrorTip("内部错误！", { left: 10, top: 100 }, true, 3000); },
+                    success: function(data) {
+                        if (data.IsSuccess) {
+                            CloseModalDialog(null, true);
+                        } else {
+                            showErrorTip(data.Msg, { left: 10, top: 100 }, true, 3000);
+                        }
+                    }
+                };
+            });
+        </script>
+    </head>
+    <body>
+        
+        @RenderBody()
+
+        <div class="buttonpanel">
+            <div style="float: right; margin-right: 10px;">
+                <a id="btnSave" class="button" href="javascript:void(0);"><span>保存</span></a>
+                <a id="btnCancel" class="button" href="javascript:void(0);"><span>取消</span></a>
+            </div>
+        </div>
+    </body>
+</html>

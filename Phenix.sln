@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Web", "Phenix.Web\Phenix.Web.csproj", "{1D394AA0-594D-423E-9609-ABC7946C6767}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CC2DAF0B-F060-4FDB-AEC2-34A7DB025F63}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Infrastructure", "Phenix.Infrastructure\Phenix.Infrastructure.csproj", "{CE3C77B6-B292-427A-965D-E0510187929B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Core", "Phenix.Core\Phenix.Core.csproj", "{3BE0001A-9741-4506-AFD3-DDE0BB38DE16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Data", "Phenix.Data\Phenix.Data.csproj", "{8EB43A3B-5B9B-48C6-A982-5C17C6E52566}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Web.Extend", "Phenix.Web.Extend\Phenix.Web.Extend.csproj", "{D45E081B-E1EC-4F4F-8E2B-CCF06A0932AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{BED8092B-FB85-4B3B-9D99-5A79B7E368D1}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phenix.Test", "Phenix.Test\Phenix.Test.csproj", "{B102BFA1-2223-474B-8498-A9BE44C2C181}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D394AA0-594D-423E-9609-ABC7946C6767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D394AA0-594D-423E-9609-ABC7946C6767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D394AA0-594D-423E-9609-ABC7946C6767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D394AA0-594D-423E-9609-ABC7946C6767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3C77B6-B292-427A-965D-E0510187929B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3C77B6-B292-427A-965D-E0510187929B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3C77B6-B292-427A-965D-E0510187929B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3C77B6-B292-427A-965D-E0510187929B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE0001A-9741-4506-AFD3-DDE0BB38DE16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE0001A-9741-4506-AFD3-DDE0BB38DE16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE0001A-9741-4506-AFD3-DDE0BB38DE16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE0001A-9741-4506-AFD3-DDE0BB38DE16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB43A3B-5B9B-48C6-A982-5C17C6E52566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB43A3B-5B9B-48C6-A982-5C17C6E52566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB43A3B-5B9B-48C6-A982-5C17C6E52566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB43A3B-5B9B-48C6-A982-5C17C6E52566}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45E081B-E1EC-4F4F-8E2B-CCF06A0932AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45E081B-E1EC-4F4F-8E2B-CCF06A0932AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45E081B-E1EC-4F4F-8E2B-CCF06A0932AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45E081B-E1EC-4F4F-8E2B-CCF06A0932AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B102BFA1-2223-474B-8498-A9BE44C2C181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B102BFA1-2223-474B-8498-A9BE44C2C181}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B102BFA1-2223-474B-8498-A9BE44C2C181}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B102BFA1-2223-474B-8498-A9BE44C2C181}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

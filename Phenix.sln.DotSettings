@@ -1,0 +1,22 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=4B0127F947125040A45D0414EF4F2347/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=4B0127F947125040A45D0414EF4F2347/AbsolutePath/@EntryValue">E:\workspace\Code\Git\Lergao\Phenix\Phenix.sln.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File4B0127F947125040A45D0414EF4F2347/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File4B0127F947125040A45D0414EF4F2347/RelativePriority/@EntryValue">1</s:Double>
+	
+	
+	
+	
+	
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/Color/@EntryValue">WindowText</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/MatchComments/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/Name/@EntryValue">Note</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/Pattern/@EntryValue">(?&lt;=\W|^)(?&lt;TAG&gt;NOTE)(\W|$)(.*)</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=59CA3290C6B11340ACA0FAA9DA64BC40/TodoIconStyle/@EntryValue">Normal</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/Color/@EntryValue">WindowText</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/MatchComments/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/Name/@EntryValue">Warn</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/Pattern/@EntryValue">(?&lt;=\W|^)(?&lt;TAG&gt;WARN)(\W|$)(.*)</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/Todo/TodoPatterns/=9B781A4A83F6454C98829624238F842C/TodoIconStyle/@EntryValue">Warning</s:String></wpf:ResourceDictionary>

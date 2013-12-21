@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_List.cshtml";
+}
+
+<div >
+    <div class="titlepanel" style="border: #99bbe8 1px solid; border-top: none;">
+        <a href="javascript:void(0);" id="btnadd" class="tbbtn">
+            <span class="Add">新增</span>
+        </a>
+        <span class="separtor"></span>
+        <a href="javascript:void(0);" id="btnvalid" class="tbbtn">
+            <span class="delete">是否可用</span>
+        </a>
+
+    </div>
+    <div>
+        <table id="DataList" style="display: none;"></table>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        var maiheight = document.documentElement.clientHeight;
+        var mainWidth = document.documentElement.clientWidth - 2; // 减去边框和左边的宽度
+        var otherpm = 110;
+        var gh = maiheight - otherpm;
+        var option = {
+            height: gh,
+            width: mainWidth,
+            url: '@Url.Action("List")',
+            colModel: [
+                { display: '操作', name: 'Id', width: 150, sortable: false, align: 'left', process: formatOp, toggle: false },
+                { display: 'Id', name: 'Id', width: 100, sortable: false, align: 'left', iskey: true },
+                { display: 'Name', name: 'Name', width: 100, sortable: false, align: 'left', iskey: true }
+            ],
+            sortname: "Id",
+            sortorder: "DESC",
+            title: "分类",
+            rp: 25,
+            usepager: true,
+            showcheckbox: true
+        };
+
+        function formatOp(v) {
+            return "<a href=\"javascript:edit('" + v + "')\" title='编辑' class='linkbtn'><span class='edit'>编辑</span></a>";
+        }
+
+        $("#DataList").flexigrid(option);
+
+        $("#btnadd").click(function(e) {
+            toolbarItem_onclick("Add", null);
+        });
+        $("#btnvalid").click(function(e) {
+            toolbarItem_onclick("Valid", null);
+        });
+    });
+
+    function edit(id) {
+        OpenModelWindow('@Url.Action("Edit")/' + id, {
+            width: 470,
+            height: 370,
+            caption: "编辑",
+            onclose: function() {
+                showLoadingMsg("编辑成功", { left: 300, top: 2 }, true, 3000);
+                refresh();
+            }
+        });
+    }
+
+    function toolbarItem_onclick(cmd, grid) {
+        if (cmd == "Add") {
+            OpenModelWindow('@Url.Action("Edit")', {
+                width: 570,
+                height: 470,
+                caption: "添加",
+                onclose: function() {
+                    showLoadingMsg("添加成功", { left: 300, top: 2 }, true, 3000);
+                    refresh();
+                }
+            });
+        } else if (cmd == "Valid") {
+            showLoadingMsg("正在建设...", { left: 300, top: 2 }, true, 3000);
+        }
+    }
+</script>

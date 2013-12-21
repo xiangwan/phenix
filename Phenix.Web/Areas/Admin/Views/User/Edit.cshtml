@@ -1,0 +1,26 @@
+﻿@model Phenix.Core.Domain.User
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Edit.cshtml";
+}
+
+<div style="padding: 5px; margin-bottom: 30px;">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Id)
+        <div class="mainpanel">
+            <table id="xeasy-form-table" width="100%" cellspacing="4" cellpadding="1">
+                <tbody>
+                    <tr>
+                        <td> 
+                            @Html.LabelFor(x => x.Name) 
+                        </td>
+                        <td>
+                            @Html.EditorFor(x => x.Name)
+                        </td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

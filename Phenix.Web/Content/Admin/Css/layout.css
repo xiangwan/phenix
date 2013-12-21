@@ -1,0 +1,214 @@
+﻿.main-panel {
+    background: #dfe8f6;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.top {
+    height: 30px;
+    background: url("images/main/top_bg.png") repeat-x top left;
+    color: #fff;
+    padding: 4px 4px 2px 10px;
+    line-height: 25px
+}
+
+.left {
+    position: absolute;
+    left: 0px;
+    top: 0px;    
+}
+
+.x-panel-header {
+    ZOOM: 1;
+    FONT: bold 11px/15px tahoma, arial, verdana, sans-serif;
+    BACKGROUND: url(images/main/panel_bg.gif) repeat-x 0px -1px;
+    COLOR: #15428b;
+    OVERFLOW: hidden; 
+
+    BORDER: #99bbe8 1px solid;
+    PADDING: 5px 3px 4px 5px
+}
+
+.x-tool {
+    WIDTH: 15px;
+    BACKGROUND: url(images/main/tool-sprites.gif) no-repeat;
+    FLOAT: right;
+    HEIGHT: 15px;
+    MARGIN-LEFT: 2px;
+    OVERFLOW: hidden;
+    CURSOR: pointer
+}
+
+.x-tool-toggle { BACKGROUND-POSITION: 0px -60px }
+
+.x-tool-toggle-over { BACKGROUND-POSITION: -15px -60px }
+
+.x-panel-collapsed .x-tool-toggle { BACKGROUND-POSITION: 0px -75px }
+
+.x-panel-collapsed .x-tool-toggle-over { BACKGROUND-POSITION: -15px -75px }
+
+.x-tool-close { BACKGROUND-POSITION: 0px 0px }
+
+.x-tool-close-over { BACKGROUND-POSITION: -15px 0px }
+
+.x-tool-minimize { BACKGROUND-POSITION: 0px -15px }
+
+.x-tool-minimize-over { BACKGROUND-POSITION: -15px -15px }
+
+.x-tool-maximize { BACKGROUND-POSITION: 0px -30px }
+
+.x-tool-maximize-over { BACKGROUND-POSITION: -15px -30px }
+
+.x-tool-restore { BACKGROUND-POSITION: 0px -45px }
+
+.x-tool-restore-over { BACKGROUND-POSITION: -15px -45px }
+
+.x-tool-gear { BACKGROUND-POSITION: 0px -90px }
+
+.x-tool-gear-over { BACKGROUND-POSITION: -15px -90px }
+
+.x-tool-pin { BACKGROUND-POSITION: 0px -135px }
+
+.x-tool-pin-over { BACKGROUND-POSITION: -15px -135px }
+
+.x-tool-unpin { BACKGROUND-POSITION: 0px -150px }
+
+.x-tool-unpin-over { BACKGROUND-POSITION: -15px -150px }
+
+.x-tool-right { BACKGROUND-POSITION: 0px -165px }
+
+.x-tool-right-over { BACKGROUND-POSITION: -15px -165px }
+
+.x-tool-left { BACKGROUND-POSITION: 0px -180px }
+
+.x-tool-left-over { BACKGROUND-POSITION: -15px -180px }
+
+.x-tool-up { BACKGROUND-POSITION: 0px -210px }
+
+.x-tool-up-over { BACKGROUND-POSITION: -15px -210px }
+
+.x-tool-down { BACKGROUND-POSITION: 0px -195px }
+
+.x-tool-down-over { BACKGROUND-POSITION: -15px -195px }
+
+.x-tool-refresh { BACKGROUND-POSITION: 0px -225px }
+
+.x-tool-refresh-over { BACKGROUND-POSITION: -15px -225px }
+
+.x-tool-minus { BACKGROUND-POSITION: 0px -255px }
+
+.x-tool-minus-over { BACKGROUND-POSITION: -15px -255px }
+
+.x-tool-plus { BACKGROUND-POSITION: 0px -240px }
+
+.x-tool-plus-over { BACKGROUND-POSITION: -15px -240px }
+
+.x-tool-search { BACKGROUND-POSITION: 0px -270px }
+
+.x-tool-search-over { BACKGROUND-POSITION: -15px -270px }
+
+.x-tool-save { BACKGROUND-POSITION: 0px -285px }
+
+.x-tool-save-over { BACKGROUND-POSITION: -15px -285px }
+
+.x-tool-help { BACKGROUND-POSITION: 0px -300px }
+
+.x-tool-help-over { BACKGROUND-POSITION: -15px -300px }
+
+.x-tool-print { BACKGROUND-POSITION: 0px -315px }
+
+.x-tool-print-over { BACKGROUND-POSITION: -15px -315px }
+
+.x-tool-collapse-south { BACKGROUND-POSITION: 0px -195px }
+
+.x-tool-collapse-south-over { BACKGROUND-POSITION: -15px -195px }
+
+.x-tool-collapse-north { BACKGROUND-POSITION: 0px -210px }
+
+.x-tool-collapse-north-over { BACKGROUND-POSITION: -15px -210px }
+
+.x-tool-collapse-west { BACKGROUND-POSITION: 0px -180px }
+
+.x-tool-collapse-west-over { BACKGROUND-POSITION: -15px -180px }
+
+.x-tool-collapse-east { BACKGROUND-POSITION: 0px -165px }
+
+.x-tool-collapse-east-over { BACKGROUND-POSITION: -15px -165px }
+
+.x-tool-expand-south { BACKGROUND-POSITION: 0px -210px }
+
+.x-tool-expand-south-over { BACKGROUND-POSITION: -15px -210px }
+
+.x-tool-expand-north { BACKGROUND-POSITION: 0px -195px }
+
+.x-tool-expand-north-over { BACKGROUND-POSITION: -15px -195px }
+
+.x-tool-expand-west { BACKGROUND-POSITION: 0px -165px }
+
+.x-tool-expand-west-over { BACKGROUND-POSITION: -15px -165px }
+
+.x-tool-expand-east { BACKGROUND-POSITION: 0px -180px }
+
+.x-tool-expand-east-over { BACKGROUND-POSITION: -15px -180px }
+
+.x-tool-expand-north {
+    MARGIN: 3px;
+    FLOAT: right
+}
+
+.x-tool-expand-south {
+    MARGIN: 3px;
+    FLOAT: right
+}
+
+.x-tool-expand-east {
+    MARGIN: 3px auto;
+    FLOAT: none
+}
+
+.x-tool-expand-west {
+    MARGIN: 3px auto;
+    FLOAT: none
+}
+
+.x-panel-bwrap {
+    ZOOM: 1;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    LEFT: 0px
+}
+
+.x-panel-body {
+    ZOOM: 1;
+    OVERFLOW: hidden;
+    background: #fff;
+    position: relative;
+    border: #99bbe8 1px solid;
+    border-top: none;
+    overflow: auto;
+}
+
+.x-tab-panel { OVERFLOW: hidden }
+
+.x-border-panel {
+    POSITION: absolute;
+    TOP: 0px;
+    LEFT: 0px
+}
+
+.x-unselectable, .x-unselectable * {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: ignore;
+}
+
+.x-panel-noborder, .x-panel-body-noborder { border: none; }

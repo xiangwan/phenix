@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Newtonsoft.Json.Glimpse</name>
+    </assembly>
+    <members>
+        <member name="T:Newtonsoft.Json.Glimpse.GlimpseJson">
+            <summary>
+            Provides Json.NET Glimpse extension helper methods.
+            </summary>
+        </member>
+        <member name="M:Newtonsoft.Json.Glimpse.GlimpseJson.Initialize">
+            <summary>
+            Initializes the Json.NET Glimpse extension.
+            </summary>
+        </member>
+    </members>
+</doc>

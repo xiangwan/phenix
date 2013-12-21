@@ -1,0 +1,23 @@
+﻿@model PagedList<User>
+
+@{
+    ViewBag.Title = "Index";
+}
+    
+welcome,@Request.RequestContext.HttpContext.User.Identity.Name
+<a href="/account/login">login page</a>
+<a href="/admin/home">admin page</a>
+<a href="/developer/home">developer page</a>
+<a href="/advertiser/home">advertiser page</a>
+
+<table border="1">
+    <thead><th>name</th><th>createOn</th></thead>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Name</td> 
+            <td>@user.CreateOn</td>
+        </tr>
+    } 
+</table>
+<div class="pages">@Html.Raw(Html.Pager(Model))</div>

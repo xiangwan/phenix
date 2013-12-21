@@ -1,0 +1,97 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>后台管理</title>
+        <link href="~/Content/Admin/Css/main.css" rel="Stylesheet" type="text/css" />
+        <link href="~/Content/Admin/Css/layout.css" rel="Stylesheet" type="text/css" />
+        <link href="~/Content/Admin/Css/tree.css" rel="Stylesheet" type="text/css" />
+        <link href="~/Content/Admin/Css/tabpanel.css" rel="Stylesheet" type="text/css" />
+        <link href="~/Content/Admin/Css/dailog.css" rel="Stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div class="main-panel">
+            <div id="top" class="top">
+                <span class="logotitle">管理后台</span>
+                 <span class="welcome">
+                     欢迎您，@Request.RequestContext.HttpContext.User.Identity.Name &nbsp;&nbsp;&nbsp;
+                     <a href="~/Account/LogOut" class='normal'><span class='logout'>注销</span></a>
+                 </span>
+            </div>
+            <div id="left" class="left" style="width: 175px; top: 38px; left: 0px;">
+                <div id="panel-header" class="x-panel-header">
+                    <span class="menupanel">菜单 </span>
+                </div>
+                <div class="x-panel-bwrap">
+                    <div id="panel-wrap" class="x-panel-body">
+                        <div id="treepanel" class="menutree">
+                            <!--menu tree -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-container" class="x-tab-panel x-border-panel" style="left: 180px; top: 38px;">
+            </div>
+            <div id="panel-bottom">
+            </div>
+        </div>
+        <script src='~/Content/Admin/Javascript/jquery-1.4.2.min.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/jquery.tree.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/jquery.tabpanel.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/jquery.ifrmdailog.js' type='text/javascript'></script>
+        <script src='~/Content/Admin/Javascript/jquery.easydrag.js' type='text/javascript'></script>
+        <script src="~/Content/Admin/Javascript/menudata.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var mainh = document.documentElement.clientHeight;
+                var mainw = document.documentElement.clientWidth;
+                var panelheader = $("#panel-header").outerHeight();
+                var header = 38;
+                var bottom = 3;
+
+                var op = { data: menudata, onnodeclick: navi };
+                $("#treepanel").treeview(op);
+                var tabo = {};
+                tabo.items = [{ id: "home", text: "主页", classes: "icon_home", isactive: true, content: "<div style='padding:10px;'>欢迎光临!</div>" }];
+                tabo.width = mainw - 180;
+                tabo.height = mainh - header - bottom;
+                $("#tab-container").tabpanel(tabo);
+
+                function navi(item) {
+                    if (item.value) {
+                        $("#tab-container").opentabitem({ id: idreplace(item.id), text: item.text, url: item.value, isactive: true, closeable: true }, true);
+                    } else {
+                        item.expand();
+                    }
+                }
+
+                function idreplace(id) {
+                    return id.replace(/[^a-zA-Z\d_]/ig, "_");
+                }
+
+                setpanelsize();
+
+                function setpanelsize() {
+                    mainh = document.documentElement.clientHeight;
+                    mainw = document.documentElement.clientWidth;
+                    var h = mainh - header - panelheader - bottom;
+                    var w = mainw - 180;
+                    $("#panel-wrap").height(h);
+                    $("#tab-container").width(w);
+                }
+
+                $(window).resize(window_resize);
+
+                function window_resize() {
+                    setpanelsize();
+                    $("#tab-container").resizetabpanel(mainw - 180, mainh - header - bottom);
+                }
+
+            });
+
+        </script>
+    </body>
+</html>

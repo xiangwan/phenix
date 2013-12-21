@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D394AA0-594D-423E-9609-ABC7946C6767}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phenix.Web</RootNamespace>
+    <AssemblyName>Phenix.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.1.5\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentSecurity">
+      <HintPath>..\packages\FluentSecurity.2.1.0\lib\net40\FluentSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentSecurity.Glimpse">
+      <HintPath>..\packages\FluentSecurity.Glimpse.2.0.0\lib\net40\FluentSecurity.Glimpse.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Ado">
+      <HintPath>..\packages\Glimpse.Ado.1.7.0\lib\net40\Glimpse.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.AspNet">
+      <HintPath>..\packages\Glimpse.AspNet.1.6.0\lib\net40\Glimpse.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Autofac">
+      <HintPath>..\packages\Glimpse.Autofac.0.2.4\lib\net40\Glimpse.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.1.8.0\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc4">
+      <HintPath>..\packages\Glimpse.Mvc4.1.5.1\lib\net40\Glimpse.Mvc4.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.NLog">
+      <HintPath>..\packages\Glimpse.NLog.1.3.0\lib\net40\Glimpse.NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Glimpse">
+      <HintPath>..\packages\Newtonsoft.Json.Glimpse.1.0.1\lib\net35\Newtonsoft.Json.Glimpse.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.1.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FluentSecurityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Areas\Advertiser\AdvertiserAreaRegistration.cs" />
+    <Compile Include="Areas\Advertiser\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Developer\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Developer\DeveloperAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\phenix.mdf" />
+    <Content Include="App_Data\phenix_log.ldf">
+      <DependentUpon>phenix.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\Admin\Css\alert.css" />
+    <Content Include="Content\Admin\Css\contextmenu.css" />
+    <Content Include="Content\Admin\Css\dailog.css" />
+    <Content Include="Content\Admin\Css\dp.css" />
+    <Content Include="Content\Admin\Css\flexigrid.css" />
+    <Content Include="Content\Admin\Css\form.css" />
+    <Content Include="Content\Admin\Css\images\alert\bot.gif" />
+    <Content Include="Content\Admin\Css\images\alert\close.gif" />
+    <Content Include="Content\Admin\Css\images\alert\corners.gif" />
+    <Content Include="Content\Admin\Css\images\alert\cornersBlue.gif" />
+    <Content Include="Content\Admin\Css\images\alert\help.gif" />
+    <Content Include="Content\Admin\Css\images\alert\important.gif" />
+    <Content Include="Content\Admin\Css\images\alert\info.gif" />
+    <Content Include="Content\Admin\Css\images\alert\title.gif" />
+    <Content Include="Content\Admin\Css\images\alert\title1.gif" />
+    <Content Include="Content\Admin\Css\images\contextmenu\delete.png" />
+    <Content Include="Content\Admin\Css\images\contextmenu\edit.png" />
+    <Content Include="Content\Admin\Css\images\contextmenu\menu_bg.gif" />
+    <Content Include="Content\Admin\Css\images\contextmenu\m_arrow.gif" />
+    <Content Include="Content\Admin\Css\images\contextmenu\m_item.gif" />
+    <Content Include="Content\Admin\Css\images\contextmenu\m_splitLine.gif" />
+    <Content Include="Content\Admin\Css\images\contextmenu\reload.png" />
+    <Content Include="Content\Admin\Css\images\contextmenu\view.png" />
+    <Content Include="Content\Admin\Css\images\dailog\app-form.png" />
+    <Content Include="Content\Admin\Css\images\dailog\headbg.gif" />
+    <Content Include="Content\Admin\Css\images\dailog\left-corners.png" />
+    <Content Include="Content\Admin\Css\images\dailog\left-right.png" />
+    <Content Include="Content\Admin\Css\images\dailog\right-corners.png" />
+    <Content Include="Content\Admin\Css\images\dailog\tool-sprites.gif" />
+    <Content Include="Content\Admin\Css\images\dailog\top-bottom.png" />
+    <Content Include="Content\Admin\Css\images\dp\btn-arrow-light.gif" />
+    <Content Include="Content\Admin\Css\images\dp\btn-arrow.gif" />
+    <Content Include="Content\Admin\Css\images\dp\cal.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\bg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\btn-sprite.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\ch.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\chtd-bg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\ddn.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\dn.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\fhbg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\fhbg.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\first.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\grid.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\grid3-special-col-bg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\grid3-special-col-sel-bg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\gridth.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\headbg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\hl.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\indicator_waitanim.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\indicator_web20_working.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\last.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\line.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\load-bg.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\load.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\load.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\magnifier.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\next.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\page-bg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\page-first.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\page-last.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\page-next.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\page-prev.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\prev.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\sort_asc.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\sort_desc.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\tbg.gif" />
+    <Content Include="Content\Admin\Css\images\flexigrid\up.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\uup.png" />
+    <Content Include="Content\Admin\Css\images\flexigrid\wbg.gif" />
+    <Content Include="Content\Admin\Css\images\main\panel_bg.gif" />
+    <Content Include="Content\Admin\Css\images\main\rightTitle_bg.png" />
+    <Content Include="Content\Admin\Css\images\main\tool-sprites.gif" />
+    <Content Include="Content\Admin\Css\images\main\topmenu_bg.png" />
+    <Content Include="Content\Admin\Css\images\main\top_bg.png" />
+    <Content Include="Content\Admin\Css\images\share\card.gif" />
+    <Content Include="Content\Admin\Css\images\share\glass-bg.gif" />
+    <Content Include="Content\Admin\Css\images\share\hd-sprite.gif" />
+    <Content Include="Content\Admin\Css\images\share\headbg.gif" />
+    <Content Include="Content\Admin\Css\images\share\information.png" />
+    <Content Include="Content\Admin\Css\images\share\left-btn.gif" />
+    <Content Include="Content\Admin\Css\images\share\right-btn.gif" />
+    <Content Include="Content\Admin\Css\images\share\table.gif" />
+    <Content Include="Content\Admin\Css\images\share\table_c.gif" />
+    <Content Include="Content\Admin\Css\images\share\tool-sprites.gif" />
+    <Content Include="Content\Admin\Css\images\share\vcard.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\loading.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\scroll-left.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\scroll-right.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\scroller-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-btm-inactive-left-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-btm-inactive-right-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-btm-left-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-btm-right-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-close.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-strip-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-strip-bg.png" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tab-strip-btm-bg.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tabs-sprite.gif" />
+    <Content Include="Content\Admin\Css\images\tabpanel\tb-blue.gif" />
+    <Content Include="Content\Admin\Css\images\tree\arrows.gif" />
+    <Content Include="Content\Admin\Css\images\tree\cbs.gif" />
+    <Content Include="Content\Admin\Css\images\tree\drop-yes.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-end-minus-nl.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-end-minus.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-end-plus-nl.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-end-plus.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-end.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-line.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-minus-nl.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-minus.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-plus-nl.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow-plus.gif" />
+    <Content Include="Content\Admin\Css\images\tree\elbow.gif" />
+    <Content Include="Content\Admin\Css\images\tree\folder-open.gif" />
+    <Content Include="Content\Admin\Css\images\tree\folder.gif" />
+    <Content Include="Content\Admin\Css\images\tree\group.gif" />
+    <Content Include="Content\Admin\Css\images\tree\leaf.png" />
+    <Content Include="Content\Admin\Css\images\tree\loading.gif" />
+    <Content Include="Content\Admin\Css\images\tree\mfolder-open.gif" />
+    <Content Include="Content\Admin\Css\images\tree\mfolder.gif" />
+    <Content Include="Content\Admin\Css\images\validation\accept.png" />
+    <Content Include="Content\Admin\Css\images\validation\exclamation.png" />
+    <Content Include="Content\Admin\Css\images\validation\tooltop.gif" />
+    <Content Include="Content\Admin\Css\images\validation\tooltop2.gif" />
+    <Content Include="Content\Admin\Css\images\validation\up_arrow.gif" />
+    <Content Include="Content\Admin\Css\images\validation\warning.gif" />
+    <Content Include="Content\Admin\Css\layout.css" />
+    <Content Include="Content\Admin\Css\main.css" />
+    <Content Include="Content\Admin\Css\tabpanel.css" />
+    <Content Include="Content\Admin\Css\tree.css" />
+    <Content Include="Content\Admin\Images\bgs\btncancel.gif" />
+    <Content Include="Content\Admin\Images\bgs\btnok.gif" />
+    <Content Include="Content\Admin\Images\bgs\button1.gif" />
+    <Content Include="Content\Admin\Images\bgs\invalid_line.gif" />
+    <Content Include="Content\Admin\Images\bgs\logintitle.png" />
+    <Content Include="Content\Admin\Images\bgs\text-bg.gif" />
+    <Content Include="Content\Admin\Images\icons\accept.png" />
+    <Content Include="Content\Admin\Images\icons\add.png" />
+    <Content Include="Content\Admin\Images\icons\alert.png" />
+    <Content Include="Content\Admin\Images\icons\app_key.png" />
+    <Content Include="Content\Admin\Images\icons\book.png" />
+    <Content Include="Content\Admin\Images\icons\check.png" />
+    <Content Include="Content\Admin\Images\icons\checkbox_0.gif" />
+    <Content Include="Content\Admin\Images\icons\checkbox_1.gif" />
+    <Content Include="Content\Admin\Images\icons\checkbox_2.gif" />
+    <Content Include="Content\Admin\Images\icons\close.gif" />
+    <Content Include="Content\Admin\Images\icons\collapseh.gif" />
+    <Content Include="Content\Admin\Images\icons\del.gif" />
+    <Content Include="Content\Admin\Images\icons\delete.png" />
+    <Content Include="Content\Admin\Images\icons\door_out.png" />
+    <Content Include="Content\Admin\Images\icons\edit.png" />
+    <Content Include="Content\Admin\Images\icons\exclamation.png" />
+    <Content Include="Content\Admin\Images\icons\expandh.gif" />
+    <Content Include="Content\Admin\Images\icons\folder_user.gif" />
+    <Content Include="Content\Admin\Images\icons\grid.png" />
+    <Content Include="Content\Admin\Images\icons\group.gif" />
+    <Content Include="Content\Admin\Images\icons\home.png" />
+    <Content Include="Content\Admin\Images\icons\ico_error.gif" />
+    <Content Include="Content\Admin\Images\icons\indicator.gif" />
+    <Content Include="Content\Admin\Images\icons\key_go.png" />
+    <Content Include="Content\Admin\Images\icons\laught.png" />
+    <Content Include="Content\Admin\Images\icons\library.png" />
+    <Content Include="Content\Admin\Images\icons\normalrole.png" />
+    <Content Include="Content\Admin\Images\icons\qcheck.gif" />
+    <Content Include="Content\Admin\Images\icons\qdelete.gif" />
+    <Content Include="Content\Admin\Images\icons\query.png" />
+    <Content Include="Content\Admin\Images\icons\redo.png" />
+    <Content Include="Content\Admin\Images\icons\right_key.gif" />
+    <Content Include="Content\Admin\Images\icons\rowdelete.png" />
+    <Content Include="Content\Admin\Images\icons\s.gif" />
+    <Content Include="Content\Admin\Images\icons\save.gif" />
+    <Content Include="Content\Admin\Images\icons\sdelete.png" />
+    <Content Include="Content\Admin\Images\icons\smile.png" />
+    <Content Include="Content\Admin\Images\icons\suser.png" />
+    <Content Include="Content\Admin\Images\icons\sysrole.png" />
+    <Content Include="Content\Admin\Images\icons\table.gif" />
+    <Content Include="Content\Admin\Images\icons\table_copy.png" />
+    <Content Include="Content\Admin\Images\icons\table_refresh.png" />
+    <Content Include="Content\Admin\Images\icons\trash.gif" />
+    <Content Include="Content\Admin\Images\icons\undo.png" />
+    <Content Include="Content\Admin\Images\icons\unhappy.png" />
+    <Content Include="Content\Admin\Images\icons\uquery.gif" />
+    <Content Include="Content\Admin\Images\icons\user.gif" />
+    <Content Include="Content\Admin\Images\icons\user.png" />
+    <Content Include="Content\Admin\Images\icons\view.png" />
+    <Content Include="Content\Admin\Images\icons\warning.png" />
+    <Content Include="Content\Admin\Images\icons\xslt.png" />
+    <Content Include="Content\Admin\Javascript\common.js" />
+    <Content Include="Content\Admin\Javascript\jquery-1.4.2.min.js" />
+    <Content Include="Content\Admin\Javascript\jquery.alert.js" />
+    <Content Include="Content\Admin\Javascript\jquery.autocomplete.js" />
+    <Content Include="Content\Admin\Javascript\jquery.contextmenu.js" />
+    <Content Include="Content\Admin\Javascript\jquery.datepicker.js" />
+    <Content Include="Content\Admin\Javascript\jquery.easydrag.js" />
+    <Content Include="Content\Admin\Javascript\jquery.flexigrid.js" />
+    <Content Include="Content\Admin\Javascript\jquery.form.js" />
+    <Content Include="Content\Admin\Javascript\jquery.hotkeys.js" />
+    <Content Include="Content\Admin\Javascript\jquery.ifrmdailog.js" />
+    <Content Include="Content\Admin\Javascript\jquery.tabpanel.js" />
+    <Content Include="Content\Admin\Javascript\jquery.tree.js" />
+    <Content Include="Content\Admin\Javascript\jquery.validate.js" />
+    <Content Include="Content\Admin\Javascript\menudata.js" />
+    <Content Include="Default.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="nlog.config" />
+    <Content Include="Areas\Developer\Views\Web.config" />
+    <Content Include="Areas\Advertiser\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_List.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Advertiser\Models\" />
+    <Folder Include="Areas\Advertiser\Views\Shared\" />
+    <Folder Include="Areas\Developer\Models\" />
+    <Folder Include="Areas\Developer\Views\Shared\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Phenix.Core\Phenix.Core.csproj">
+      <Project>{3be0001a-9741-4506-afd3-dde0bb38de16}</Project>
+      <Name>Phenix.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phenix.Data\Phenix.Data.csproj">
+      <Project>{8eb43a3b-5b9b-48c6-a982-5c17c6e52566}</Project>
+      <Name>Phenix.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phenix.Infrastructure\Phenix.Infrastructure.csproj">
+      <Project>{ce3c77b6-b292-427a-965d-e0510187929b}</Project>
+      <Name>Phenix.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>31659</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:31295/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
